@@ -1,6 +1,6 @@
 import { Decimal128 } from "mongodb";
 import mongoose from "mongoose";
-import { authorSchema } from "./author.js"
+import { authorSchema } from "./author.js";
 
 const bookSchema = new mongoose.Schema({
   id: { type: mongoose.Schema.Types.ObjectId },
@@ -8,8 +8,8 @@ const bookSchema = new mongoose.Schema({
   author: authorSchema,
   pages: { type: Number },
   price: { type: Decimal128 }
-}, { versionKey: false })
+}, { versionKey: false });
 
-const book = mongoose.model('books', bookSchema)
+const book = mongoose.model("books", bookSchema);
 
-export default book
+export default book;
